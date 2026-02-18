@@ -4,7 +4,7 @@
     <header class="bg-white shadow p-4 flex justify-between items-center">
       <h1 class="text-xl font-bold">Vue Shop</h1>
       <div>
-        🛒 0
+        🛒 {{ cart.totalItems || 0 }}
       </div>
     </header>
 
@@ -15,3 +15,11 @@
 
   </div>
 </template>
+
+
+<script setup>
+import {useCartStore} from '../stores/cart'
+
+const cart = useCartStore()
+</script>
+

@@ -21,10 +21,12 @@
         </p>
 
         <button
+          @click="addToCart"
           class="mt-6 bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
         >
           Add to Cart
         </button>
+
 
         <div class="mt-6">
           <RouterLink
@@ -51,10 +53,20 @@ import {useRoute} from 'vue-router'
 import MainLayout from '../layouts/MainLayout.vue'
 import {products} from '../data/products'
 
+import {useCartStore} from '../stores/cart'
+
+const cart = useCartStore()
+
+const addToCart = () => {
+  cart.addToCart(product.value)
+}
+
 const route = useRoute()
 
 const product = computed(() => {
   const id = Number(route.params.id)
   return products.find(p => p.id === id)
 })
+
+
 </script>
