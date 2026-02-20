@@ -24,8 +24,8 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
-  routes
+  history: createWebHistory('/vue-shop/'),
+  routes,
 })
 
 export default router
