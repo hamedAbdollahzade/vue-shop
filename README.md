@@ -7,6 +7,8 @@
 A simple Vue 3 e-commerce project with **Products listing**, **Product details**, and **Shopping cart** using **Vue
 Router**, **Pinia**, and **TailwindCSS**.
 
+
+https://hamedabdollahzade.github.io/vue-shop/
 ---
 
 ## 🎯 Features
